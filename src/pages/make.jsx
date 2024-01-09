@@ -25,6 +25,9 @@ const MakeProject = () => {
         image2: null,
         image3: null,
         image4: null,
+        width: "",
+        height: "",
+        aspectRatio: ""
      })
 
      const handleChange = (e) => {
@@ -114,6 +117,21 @@ const MakeProject = () => {
             <div className="grid gap-2">
                 <Label htmlFor="productImage">Upload Product Image</Label>
             <CustomFileInput title="Select Image 4" selectedFile={inputField.image4} handleChange={(e) =>handleUpload(e, "image4")} name="image4"/>
+            </div>
+
+            <div className="grid gap-2">
+              <Label htmlFor="productName">Main Image Width</Label>
+              <Input id="width" placeholder="Enter product name" type="number"  name="width" onChange={handleChange} value={inputField.width} />
+            </div>
+
+            <div className="grid gap-2">
+              <Label htmlFor="productName">Main Image Height</Label>
+              <Input id="height" placeholder="Enter product height" type="number"  name="height" onChange={handleChange} value={inputField.height} />
+            </div>
+
+            <div className="grid gap-2">
+              <Label htmlFor="productName">Image Aspect Ratio</Label>
+              <Input id="aspectRatio" placeholder="Enter image aspectRatio" type="text"  name="aspectRatio" onChange={handleChange} value={inputField.aspectRatio} />
             </div>
 
             <div className="grid gap-2">
