@@ -3,7 +3,9 @@ import './App.css';
 import HeaderPage from './components/layouts/Header';
 import ProductTable from './components/Table/ProductTable';
 import AddProductForm from './pages/create';
+import ProjectPage from './pages/project';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import MakeProject from './pages/make';
 
 
 function App() {
@@ -22,7 +24,9 @@ function App() {
           <BrowserRouter>
             <Routes>    
               <Route path='/' element={<ProductTable />} />
-              <Route path='/create' element={<AddProductForm />} />             
+              <Route path='/create' element={<AddProductForm />} />  
+              <Route path='/projects' element={<ProjectPage /> } />           
+              <Route path='/project' element={<MakeProject /> } />
             </Routes>
           </BrowserRouter>
         </main>
